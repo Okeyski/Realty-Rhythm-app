@@ -69,7 +69,7 @@ const BookmarkButton = ({ property }) => {
   return isBookmarked ? (
     <button
       onClick={handleClick}
-      className="bg-red-500 hover:bg-[#243a6c] text-white font-bold w-full py-2 px-4 rounded-full flex items-center justify-center"
+      className="bg-[#f0e4d3] hover:bg-[#fbf3e8] text-[#243a6c] font-bold w-full py-2 px-4 rounded-full flex items-center justify-center"
     >
       <FaBookmark className="mr-2" /> Remove Bookmark
     </button>

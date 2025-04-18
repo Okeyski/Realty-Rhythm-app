@@ -9,10 +9,7 @@ const SavedPropertiesPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchSavedProperties = async (userId) => {
-      if (!userId) {
-        return;
-      }
+    const fetchSavedProperties = async () => {
       try {
         const res = await fetch("/api/bookmarks");
 
@@ -21,11 +18,11 @@ const SavedPropertiesPage = () => {
           setProperties(data);
         } else {
           console.log(res.statusText);
-          toast.error("Failed to fetch saved propeties");
+          toast.error("Failed to fetch saved properties");
         }
       } catch (error) {
         console.log(error);
-        toast.error("Failed to fetch saved propeties");
+        toast.error("Failed to fetch saved properties");
       } finally {
         setLoading(false);
       }

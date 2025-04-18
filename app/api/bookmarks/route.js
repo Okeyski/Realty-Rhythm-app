@@ -6,10 +6,14 @@ import { getSessionUser } from "@/utils/getSessionUser";
 export const dynamic = "force-dynamic";
 
 //GET api/bookmarks
-export const GET = async (request) => {
+export const GET = async () => {
   try {
     await connectDB();
     const sessionUser = await getSessionUser();
+    if (!sessionUser || !sessionUser.userId){
+      return new Response('User ID is required', {status: 401})
+    }
+    const {userId} = sessionUser
 
     //Find user in database
     const user = await User.findOne({ _id: userId });
@@ -29,6 +33,10 @@ export const POST = async (request) => {
     const { propertyId } = await request.json();
     const sessionUser = await getSessionUser();
 
+    if (!sessionUser || !sessionUser.userId){
+      return new Response('User ID is required', {status: 401})
+    }
+    const {userId} = sessionUser
     //Find user in database
     const user = await User.findOne({ _id: userId });
 
