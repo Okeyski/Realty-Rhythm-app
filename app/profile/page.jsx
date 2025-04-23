@@ -120,7 +120,7 @@ const ProfilePage = () => {
                     <div className="mt-2">
                       <Link
                         href={`/properties/${property._id}/edit`}
-                        className="bg-blue-500 text-white px-3 py-3 rounded-md mr-2 hover:bg-blue-600"
+                        className="bg-[#243a6c] text-white px-3 py-3 rounded-md mr-2 hover:bg-[#1a2a50]"
                       >
                         Edit
                       </Link>

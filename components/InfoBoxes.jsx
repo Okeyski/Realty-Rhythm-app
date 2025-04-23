@@ -24,7 +24,7 @@ const InfoBoxes = () => {
             buttonInfo={{
               text: "Add Property",
               link: "/properties/add",
-              backgroundColor: "bg-blue-500",
+              backgroundColor: "bg-[#243a6c]",
             }}
           >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo odio

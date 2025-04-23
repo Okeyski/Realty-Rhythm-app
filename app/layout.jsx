@@ -4,7 +4,11 @@ import "@/assets/styles/globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
+import { GlobalProvider } from "@/context/GlobalContext";
 import { ToastContainer } from "react-toastify";
+import 'photoswipe/dist/photoswipe.css'
+
+
 export const metadata = {
   title: "RealtyRhythm",
 };
@@ -16,6 +20,7 @@ const nunito = Nunito({
 
 const MainLayout = ({ children }) => {
   return (
+    <GlobalProvider>
     <AuthProvider>
       <html lang="en" className={nunito.className}>
         <body>
@@ -26,6 +31,7 @@ const MainLayout = ({ children }) => {
         </body>
       </html>
     </AuthProvider>
+    </GlobalProvider>
   );
 };
 
