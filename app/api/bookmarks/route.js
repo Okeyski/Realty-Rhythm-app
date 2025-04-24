@@ -10,10 +10,10 @@ export const GET = async () => {
   try {
     await connectDB();
     const sessionUser = await getSessionUser();
-    if (!sessionUser || !sessionUser.userId){
-      return new Response('User ID is required', {status: 401})
+    if (!sessionUser || !sessionUser.userId) {
+      return new Response("User ID is required", { status: 401 });
     }
-    const {userId} = sessionUser
+    const { userId } = sessionUser;
 
     //Find user in database
     const user = await User.findOne({ _id: userId });
@@ -22,7 +22,7 @@ export const GET = async () => {
     return new Response(JSON.stringify(bookmarks), { status: 200 });
   } catch (error) {
     console.log(error);
-    return new Response('Something went wrong', { status: 500 });
+    return new Response("Something went wrong", { status: 500 });
   }
 };
 
@@ -33,10 +33,10 @@ export const POST = async (request) => {
     const { propertyId } = await request.json();
     const sessionUser = await getSessionUser();
 
-    if (!sessionUser || !sessionUser.userId){
-      return new Response('User ID is required', {status: 401})
+    if (!sessionUser || !sessionUser.userId) {
+      return new Response("User ID is required", { status: 401 });
     }
-    const {userId} = sessionUser
+    const { userId } = sessionUser;
     //Find user in database
     const user = await User.findOne({ _id: userId });
 
@@ -53,8 +53,8 @@ export const POST = async (request) => {
     } else {
       //if not bookmaarked, add it
       user.bookmarks.push(propertyId);
-      message = "Bookmark removed successfully";
-      isBookmarked = false;
+      message = "Bookmark added successfully";
+      isBookmarked = true;
     }
     await user.save();
     return new Response(JSON.stringify({ message, isBookmarked }), {
