@@ -4,3 +4,38 @@ html,
 body {
   font-family: "Nunito", sans-serif;
 }
+
+.hero-section {
+  background-image: url('../images/back-image.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 50px;
+  padding-bottom: 0;
+  min-height: 665px;
+}
+
+@media screen and (min-width: 991px) {
+  .hero-section {
+    height: calc(100vh - 0px);
+  }
+}
+
+.hero-section::after {
+  content: "";
+  background: linear-gradient(90deg,  rgba(255,255,255,0.8) 0%, rgba(0,0,0,0.9) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.65;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
