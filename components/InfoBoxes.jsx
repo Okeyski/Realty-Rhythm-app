@@ -27,7 +27,7 @@ const InfoBoxes = () => {
             }}
           >
             Manage your listings with ease. Track your property performance,
-            receive real-time inquiries, and connect directly with verified
+            receive real-time inquiries and connect directly with verified
             renters. Your rental journey just got simpler.
           </InfoBox>
         </div>
