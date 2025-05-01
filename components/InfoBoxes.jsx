@@ -14,9 +14,8 @@ const InfoBoxes = () => {
               backgroundColor: "bg-black",
             }}
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo odio
-            facere harum laudantium reprehenderit corrupti iste repudiandae,
-            consectetur corporis recusandae! Aspernatur tempora illum officia
+            Discover properties tailored to your lifestyle and budget. Browse,
+            save favorites, and chat directly with landlords—all in one place.
           </InfoBox>
           <InfoBox
             heading="For Property Owners"
@@ -27,9 +26,9 @@ const InfoBoxes = () => {
               backgroundColor: "bg-[#243a6c]",
             }}
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo odio
-            facere harum laudantium reprehenderit corrupti iste repudiandae,
-            consectetur corporis recusandae! Aspernatur tempora illum officia
+            Manage your listings with ease. Track your property performance,
+            receive real-time inquiries, and connect directly with verified
+            renters. Your rental journey just got simpler.
           </InfoBox>
         </div>
       </div>
