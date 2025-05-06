@@ -49,7 +49,7 @@ export const POST = async (request) => {
     const { name, email, message, phone, recipient, property } =
       await request.json();
 
-    const sessionUser = await getSessionUser;
+    const sessionUser = await getSessionUser();
     if (!sessionUser || !sessionUser.user) {
       return new Response(JSON.stringify({ message: "User ID is required" }), {
         status: 401,
