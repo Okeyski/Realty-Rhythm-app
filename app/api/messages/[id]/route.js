@@ -12,7 +12,7 @@ export const PUT = async (request, { params }) => {
 
     const { id } = await params;
 
-    const sessionUser = await getSessionUser;
+    const sessionUser = await getSessionUser();
     if (!sessionUser || !sessionUser.user) {
       return new Response("User ID is required", {
         status: 401,
@@ -49,7 +49,7 @@ export const DELETE = async (request, { params }) => {
 
     const { id } = await params;
 
-    const sessionUser = await getSessionUser;
+    const sessionUser = await getSessionUser();
     if (!sessionUser || !sessionUser.user) {
       return new Response("User ID is required", {
         status: 401,
