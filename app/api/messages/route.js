@@ -9,7 +9,7 @@ export const GET = async () => {
   try {
     await connectDB();
 
-    const sessionUser = await getSessionUser;
+    const sessionUser = await getSessionUser();
     if (!sessionUser || !sessionUser.user) {
       return new Response(JSON.stringify("User ID is required"), {
         status: 401,
